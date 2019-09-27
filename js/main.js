@@ -107,22 +107,8 @@ $( document ).ready(function() {
     }
 
     //condition slider show/destroy
-    var ww = $(window).width();
-    if (ww>=992)  {
-        destroySlider($('.portfolio-items'), $('.portfolio-items__wrapper'), $('.portfolio-item'),
-        ['.portfolio-item-next', '.portfolio-item-prev'], portfolioSwiper);
-
-        destroySlider($('.team-items'), $('.team-items__wrapper'), $('.team-item'),
-        ['.team-item-next', '.team-item-prev'], teamSwiper);
-    } else {
-        showSlider($('.portfolio-items'), $('.portfolio-items__wrapper'), $('.portfolio-item'),
-        ['.portfolio-item-next', '.portfolio-item-prev'], portfolioSwiper);
-
-        showSlider($('.team-items'), $('.team-items__wrapper'), $('.team-item'),
-        ['.team-item-next', '.team-item-prev'], teamSwiper);
-    }
-    $(window).resize(function(){
-        if (ww>=992)  {
+    window.addEventListener('resize', () => {
+        if (window.innerWidth>=992)  {
             destroySlider($('.portfolio-items'), $('.portfolio-items__wrapper'), $('.portfolio-item'),
             ['.portfolio-item-next', '.portfolio-item-prev'], portfolioSwiper);
 
@@ -136,6 +122,5 @@ $( document ).ready(function() {
             ['.team-item-next', '.team-item-prev'], teamSwiper);
         }
     })
-    $(window).trigger("resize")
 });
 
