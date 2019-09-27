@@ -461,11 +461,12 @@ input {
   background: #fff;
   padding: 21px 31px;
   border-radius: 5px;
-  width: 100%;
+  width: 300px;
   transition: 0.2s;
   z-index: 1020;
-  left: 0;
-  top: -205px;
+  left: 50%;
+  top: -370%;
+  transform: translateX(-50%);
 }
 .price-pocket_item .price-pocket-item__popover::before {
   z-index: -1;
